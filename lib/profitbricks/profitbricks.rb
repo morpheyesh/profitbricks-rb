@@ -19,7 +19,7 @@ module Profitbricks
 
     @client = Savon::Client.new do |globals|
       # FIXME the WSDL currently returns a wrong endpoint
-      globals.wsdl "https://api.profitbricks.com/1.2/wsdl"
+      globals.wsdl "https://api.profitbricks.com/1.3/wsdl"
       globals.convert_request_keys_to :lower_camelcase
       globals.raise_errors true
       globals.log Profitbricks::Config.log
